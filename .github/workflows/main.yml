@@ -1,0 +1,19 @@
+name: TestKCFCSS
+on:
+  workflow_dispatch:
+  
+env:
+  GIT_ACCESS_TOKEN: "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" #this should be replaced with a secret
+
+jobs:
+  buildImage:
+    permissions:
+      contents: read
+      id-token: write
+    runs-on: self-hosted
+    steps:                        
+    # Checkout
+    - name: Checkout
+      run: |      
+        git clone https://github.com/Conduent-Inc/TestRunner.git                   
+        ls        
