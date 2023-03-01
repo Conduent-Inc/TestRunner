@@ -1,4 +1,4 @@
-name: TestKCFCSS
+name: TestRunner
 on:
   workflow_dispatch:
   
