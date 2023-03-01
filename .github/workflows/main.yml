@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   
 env:
-  GIT_ACCESS_TOKEN: "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" #this should be replaced with a secret
+  GIT_ACCESS_TOKEN: "1235456" #this should be replaced with a secret
 
 jobs:
   buildImage:
@@ -14,6 +14,7 @@ jobs:
     steps:                        
     # Checkout
     - name: Checkout
-      run: |      
+      run: | 
+        rm -rf TestRunner
         git clone https://github.com/Conduent-Inc/TestRunner.git                   
         ls        
